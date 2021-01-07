@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/fullpage.min.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<ul id="myMenu" class="menu">
+		<li data-menuanchor="firstPage" class="menu__item active">
+			<a href="#firstPage" class="menu__link">section 1</a>
+		</li>
+		<li data-menuanchor="secondPage" class="menu__item">
+			<a href="#secondPage" class="menu__link">section 2</a>
+		</li>
+		<li data-menuanchor="thirdPage" class="menu__item">
+			<a href="#thirdPage" class="menu__link">section 3</a>
+		</li>
+		<li data-menuanchor="fourthPage" class="menu__item">
+			<a href="#fourthPage" class="menu__link">section 4</a>
+		</li>
+	</ul>
+	<div id="fullpage">
+		<div class="section">
+			<h2 class="title">SECTION 1</h2>
+		</div>
+		<div class="section">
+			<h2 class="title">SECTION 2</h2>
+		</div>
+		<div class="section">
+			<h2 class="title">SECTION 3</h2>
+		</div>
+		<div class="section">
+			<h2 class="title">SECTION 4</h2>
+		</div>
+		<div class="section fp-auto-height footer">
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo illo ullam nihil odit dolore, mollitia numquam, qui id. Explicabo id iste praesentium dolor ab natus sint, in molestiae assumenda. Sit!</p>
+		</div>
+	</div>
+</body>
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/fullpage.min.js"></script>
+<script>
+	$(document).ready(function() {
+		$('#fullpage').fullpage({
+			//options here
+			licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
+			anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'lastPage'],
+			menu: '#myMenu',
+			verticalCentered: true
+		});
+	});
+</script>
+</html>
